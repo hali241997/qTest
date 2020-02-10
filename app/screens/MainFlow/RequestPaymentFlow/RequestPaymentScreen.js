@@ -44,7 +44,6 @@ class RequestPayment extends Component {
                     <CustomButton
                         text='Generate Bill'
                         routeName='GenerateBill'
-                        // style={{ marginHorizontal: 5 }}
                     />
                 </View>
             </View>
