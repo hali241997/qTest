@@ -90,7 +90,7 @@ class ReportsScreen extends Component {
                         showsVerticalScrollIndicator={false}
                         renderItem={({ item, index }) => {
                             return (
-                                <View style={{ marginBottom: index === this.state.dailyBills.length - 1 ? 20 : 0 }}>
+                                <View style={{ marginBottom: this.state.selectedDaily ? (index === this.state.dailyBills.length - 1 ? 20 : 0) : (this.state.selectedWeekly ? (index === this.state.weeklyBills.length - 1 ? 20 : 0) : (index === this.state.monthlyBills.length - 1 ? 20 : 0)) }}>
                                     <View style={[MainFlowStyles.cardStyle, { marginBottom: 20, marginHorizontal: 5, marginTop: index === 0 ? 20 : 0, flex: 1 }]}>
                                         <View style={{ padding: 10 }}>
                                             <View style={{ flexDirection: 'row' }}>
