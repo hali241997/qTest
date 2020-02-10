@@ -30,7 +30,7 @@ class Settings extends Component {
                 <Header />
                 <ScrollView style={{ marginBottom: 40 }}>
                     <View style={{ margin: 20 }}>
-                        <Text style={{ fontSize: 30, fontWeight: 'bold', alignSelf: 'center', marginBottom: 20 }}>Settings</Text>
+                        <Text style={MainFlowStyles.headerTextStyle}>Settings</Text>
 
                         <View style={[MainFlowStyles.cardStyle, { paddingHorizontal: 10 }]}>
                             <View style={{ width: 80, height: 80, borderRadius: 80 / 2, backgroundColor: '#FF3301', alignItems: 'center', justifyContent: 'center', alignSelf: 'center', marginVertical: 20 }}>

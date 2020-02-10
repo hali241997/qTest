@@ -34,16 +34,16 @@ class GenerateBillScreen extends Component {
                 <Header />
                 <View style={{ flex: 1, marginHorizontal: 20, marginTop: 30 }}>
                     <View style={[MainFlowStyles.cardStyle, { paddingTop: 10, paddingBottom: 10, flex: 1 }]}>
-                        <Text style={{ fontSize: 30, fontWeight: 'bold', alignSelf: 'center', marginBottom: 20 }}>Billing</Text>
+                        <Text style={MainFlowStyles.headerTextStyle}>Billing</Text>
 
                         <View style={{ flexDirection: 'row', paddingBottom: 20, marginTop: 20, borderBottomColor: '#FFC1B2', borderBottomWidth: 1 }}>
-                            <View style={{ width: (width - 40) / 3, alignItems: 'center', justifyContent: 'center' }}>
+                            <View style={MainFlowStyles.billHeadingStyle}>
                                 <Text>Item Name</Text>
                             </View>
-                            <View style={{ width: (width - 40) / 3, alignItems: 'center', justifyContent: 'center' }}>
+                            <View style={MainFlowStyles.billHeadingStyle}>
                                 <Text>Price</Text>
                             </View>
-                            <View style={{ width: (width - 40) / 3, alignItems: 'center', justifyContent: 'center' }}>
+                            <View style={MainFlowStyles.billHeadingStyle}>
                                 <Text>Quantity</Text>
                             </View>
                         </View>
@@ -56,13 +56,13 @@ class GenerateBillScreen extends Component {
                             renderItem={({ item }) => {
                                 return (
                                     <View style={{ flexDirection: 'row', paddingBottom: 20, marginTop: 20, borderBottomColor: '#FFC1B2', borderBottomWidth: 1 }}>
-                                        <View style={{ width: (width - 40) / 3, alignItems: 'center', justifyContent: 'center' }}>
+                                        <View style={MainFlowStyles.billHeadingStyle}>
                                             <Text>{item.itemName}</Text>
                                         </View>
-                                        <View style={{ width: (width - 40) / 3, alignItems: 'center', justifyContent: 'center' }}>
+                                        <View style={MainFlowStyles.billHeadingStyle}>
                                             <Text>{'Rs. ' + item.price}</Text>
                                         </View>
-                                        <View style={{ width: (width - 40) / 3, alignItems: 'center', justifyContent: 'center' }}>
+                                        <View style={MainFlowStyles.billHeadingStyle}>
                                             <Text>{item.quantity}</Text>
                                         </View>
                                     </View>

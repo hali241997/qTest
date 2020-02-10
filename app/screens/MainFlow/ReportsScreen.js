@@ -42,42 +42,42 @@ class ReportsScreen extends Component {
             <View>
                 <Header />
                 <View style={{ margin: 10 }}>
-                    <Text style={{ fontSize: 30, fontWeight: 'bold', alignSelf: 'center', marginBottom: 20 }}>Reports</Text>
+                    <Text style={MainFlowStyles.headerTextStyle}>Reports</Text>
 
                     <TouchableOpacity style={{ flexDirection: 'row', marginBottom: 10 }}>
                         <TouchableOpacity
-                            style={{ width: (width - 20) / 3 }}
+                            style={MainFlowStyles.tabStyles}
                             onPress={() => this.setState({ selectedDaily: true, selectedWeekly: false, selectedMonthly: false })}
                         >
                             <View style={{ flexDirection: 'row' }}>
-                                <View style={{ paddingBottom: 10, borderBottomColor: this.state.selectedDaily ? '#FF3301' : 'transparent', borderBottomWidth: 3, marginLeft: 10 }}>
-                                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: this.state.selectedDaily ? 'black' : 'grey' }}>Daily</Text>
+                                <View style={[MainFlowStyles.tabTextContainerStyle, { borderBottomColor: this.state.selectedDaily ? '#FF3301' : 'transparent', marginLeft: 10 }]}>
+                                    <Text style={[MainFlowStyles.tabTextStyle, { color: this.state.selectedDaily ? 'black' : 'grey' }]}>Daily</Text>
                                 </View>
                                 <View style={{ flex: 1 }} />
                             </View>
                         </TouchableOpacity>
 
                         <TouchableOpacity
-                            style={{ width: (width - 20) / 3 }}
+                            style={MainFlowStyles.tabStyles}
                             onPress={() => this.setState({ selectedDaily: false, selectedWeekly: true, selectedMonthly: false })}
                         >
                             <View style={{ flexDirection: 'row' }}>
                                 <View style={{flex: 1}} />
-                                <View style={{ paddingBottom: 10, borderBottomColor: this.state.selectedWeekly ? '#FF3301' : 'transparent', borderBottomWidth: 3 }}>
-                                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: this.state.selectedWeekly ? 'black' : 'grey' }}>Weekly</Text>
+                                <View style={[MainFlowStyles.tabTextContainerStyle, {borderBottomColor: this.state.selectedWeekly ? '#FF3301' : 'transparent'}]}>
+                                    <Text style={[MainFlowStyles.tabTextStyle, { color: this.state.selectedWeekly ? 'black' : 'grey' }]}>Weekly</Text>
                                 </View>
                                 <View style={{flex: 1}} />
                             </View>
                         </TouchableOpacity>
 
                         <TouchableOpacity
-                            style={{ width: (width - 20) / 3 }}
+                            style={MainFlowStyles.tabStyles}
                             onPress={() => this.setState({ selectedDaily: false, selectedWeekly: false, selectedMonthly: true })}
                         >
                             <View style={{ flexDirection: 'row' }}>
                                 <View style={{ flex: 1 }} />
-                                <View style={{ paddingBottom: 10, borderBottomColor: this.state.selectedMonthly ? '#FF3301' : 'transparent', borderBottomWidth: 3, marginRight: 10 }}>
-                                    <Text style={{ fontSize: 18, fontWeight: 'bold', color: this.state.selectedMonthly ? 'black' : 'grey' }}>Monthly</Text>
+                                <View style={[MainFlowStyles.tabTextContainerStyle, { borderBottomColor: this.state.selectedMonthly ? '#FF3301' : 'transparent', marginRight: 10 }]}>
+                                    <Text style={[MainFlowStyles.tabTextStyle, { color: this.state.selectedMonthly ? 'black' : 'grey' }]}>Monthly</Text>
                                 </View>
                             </View>
                         </TouchableOpacity>
