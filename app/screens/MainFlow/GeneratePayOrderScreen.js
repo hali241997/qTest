@@ -25,7 +25,7 @@ class GeneratePayOrderScreen extends Component {
 
                     <View style={[MainFlowStyles.cardStyle]}>
                         <Text style={{ fontSize: 20, fontWeight: 'bold', alignSelf: 'center', marginVertical: 10 }}>Pay Order</Text>
-                        <View style={{ borderBottomColor: 'red', borderBottomWidth: 1, marginBottom: 30 }} />
+                        <View style={{ borderBottomColor: '#FF3301', borderBottomWidth: 1, marginBottom: 30 }} />
 
                         <View style={{ marginHorizontal: 10 }}>
                             <Input
